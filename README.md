@@ -1,4 +1,6 @@
+## Forked copy
 
+<https://nbgrader.readthedocs.io/en/stable/user_guide/installation.html> i de <https://github.com/johnhw/moodle_nbgrader>.
 
 ## Submissions
 Assuming you have an assignment called `<assignment>` (e.g. `week_2_numerical_ii`)
