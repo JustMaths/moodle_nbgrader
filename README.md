@@ -1,6 +1,8 @@
 ## Forked copy
 
-<https://nbgrader.readthedocs.io/en/stable/user_guide/installation.html> i de <https://github.com/johnhw/moodle_nbgrader>.
+Forked from <https://github.com/johnhw/moodle_nbgrader> and slightly adapted.
+
+This code preprocesses assignments downloaded from Moodle for marking with nbgrader for Jupyter notebooks.  For details of nbgrader see <https://nbgrader.readthedocs.io/en/stable/user_guide/installation.html>.
 
 ## Submissions
 Assuming you have an assignment called `<assignment>` (e.g. `week_2_numerical_ii`)
