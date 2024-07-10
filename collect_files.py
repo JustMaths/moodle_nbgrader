@@ -141,7 +141,7 @@ if len(sys.argv)!=3:
         
         NB You MUST run this script from the course directory
            The assignment_id must be the same as the folder in nbgrader eg coursework_1.
-           The notebook name must be the same as the ipynb filename is the release/<assignmen_id> folder in nbgrader
+           The notebook name must be the same as the ipynb filename in the release/<assignment_id> folder in nbgrader
            The ipynb submission will be renamed <notebook_name>.ipynb; all other files will not.
 
     """)

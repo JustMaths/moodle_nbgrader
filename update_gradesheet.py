@@ -1,3 +1,13 @@
+######################
+#
+# NB MUST Copy this into the course directory and run from there
+# Code populate the marks spreadsheet and zip up all the feedback files
+# output is in exports directory
+#
+# NB MUST grade AND generate feedback file in nbgrader first!
+#
+######################
+
 import nbgrader, csv, codecs, sys, os, shutil
 from nbgrader.apps import NbGraderAPI
 import zipfile
