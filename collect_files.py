@@ -36,7 +36,7 @@ def moodle_gradesheet(notebook_name, assign_name, csv_file, zip_file):
         if True in [ fname.endswith('.'+ext) for ext in ignored_ext ]:
             continue
         
-        match = re.match("[\*\w\-\'\s\.]+_([0-9]+)_.*", fname)
+        match = re.match(r"[\*\w\-\'\s\.]+_([0-9]+)_.*", fname)
         if match:
             if match.groups()[0] in fnames.keys():
                 fnames[match.groups()[0]].append(fname)
@@ -93,7 +93,7 @@ def moodle_gradesheet(notebook_name, assign_name, csv_file, zip_file):
                     if fname.endswith('.ipynb'):
                         notebook_file = notebook_name + ".ipynb"
                     else:
-                        notebook_file = fname
+                        notebook_file = os.path.basename(fname)
                     if verbose:
                         print("Extracting {notebook} to {path}".format(notebook=notebook_file, path=submission_path))
 
@@ -141,7 +141,7 @@ if len(sys.argv)!=3:
         
         NB You MUST run this script from the course directory
            The assignment_id must be the same as the folder in nbgrader eg coursework_1.
-           The notebook name must be the same as the ipynb filename is the release/<assignmen_id> folder in nbgrader
+           The notebook name must be the same as the ipynb filename is the release/<assignment_id> folder in nbgrader
            The ipynb submission will be renamed <notebook_name>.ipynb; all other files will not.
 
     """)

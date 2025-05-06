@@ -25,6 +25,9 @@ def moodle_gradesheet(assignment, outputname, with_feedback=True):
     
     csv_file = csv_file[0]
     
+    if not os.path.exists(export_dir):
+        os.mkdir(export_dir)
+
     with open(os.path.join(import_dir, csv_file), newline='', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
     
