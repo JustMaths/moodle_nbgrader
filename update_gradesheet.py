@@ -42,7 +42,7 @@ def moodle_gradesheet(assignment, outputname, with_feedback=True):
             writer = csv.DictWriter(out, reader.fieldnames)
             writer.writeheader()
             for line in reader:        
-                email, ident, fullname, status, grade, max_grade = line["Email address"], line['Identifier'], line['Full name'], line['Status'], line['Grade'], line['Maximum Grade']                        
+                email, ident, fullname, status, grade, max_grade = line["Email address"], line['Identifier'], line['Full name'], line['Status'], line['Grade'], line['Maximum grade']                        
                 unique_id = email[0:email.index('@')]
                 try:
                     submission = gradebook.find_submission(assignment, unique_id)
@@ -85,7 +85,7 @@ def moodle_gradesheet(assignment, outputname, with_feedback=True):
                         name=fullname, grade=line['Grade']))
 
                     # correct the maximum grade
-                    line['Maximum Grade'] = submission.max_score
+                    line['Maximum grade'] = submission.max_score
                     writer.writerow(line)
                 
             print("Wrote to {0}".format(fname))

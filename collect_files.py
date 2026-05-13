@@ -56,7 +56,7 @@ def moodle_gradesheet(notebook_name, assign_name, csv_file, zip_file):
         for line in reader:        
             
             ident, fullname, email, status, grade, max_grade = (line['Identifier'], line['Full name'], line["Email address"], 
-                                                                line['Status'], line['Grade'], line['Maximum Grade'])
+                                                                line['Status'], line['Grade'], line['Maximum grade'])
 
             should_be_submission =  "Submitted" in status
 
